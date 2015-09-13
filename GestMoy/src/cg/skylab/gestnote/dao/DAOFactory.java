@@ -10,6 +10,14 @@ import cg.skylab.gestnote.dao.impl.OptionDAO;
 import cg.skylab.gestnote.dao.impl.TypeEvalDAO;
 import cg.skylab.gestnote.dao.impl.UserDAO;
 import cg.skylab.gestnote.dao.impl.UserRoleDAO;
+import cg.skylab.gestnote.models.Etudiant;
+import cg.skylab.gestnote.models.Filiere;
+import cg.skylab.gestnote.models.Matiere;
+import cg.skylab.gestnote.models.Moyenne;
+import cg.skylab.gestnote.models.Noter;
+import cg.skylab.gestnote.models.TypeEval;
+import cg.skylab.gestnote.models.User;
+import cg.skylab.gestnote.models.UserRole;
 import cg.skylab.gestnote.utils.DBUtil;
 
 public class DAOFactory {
@@ -24,7 +32,7 @@ public class DAOFactory {
 	 * Retourne un objet Etudiant 
 	 * @return DAO
 	 */
-	public static DAO getEtudiantDAO() {
+	public static DAO<Etudiant> getEtudiantDAO() {
 		return new EtudiantDAO(conn);
 	}
 
@@ -33,7 +41,7 @@ public class DAOFactory {
 	 * Retourne un objet Option
 	 * @return
 	 */
-	public static DAO getOptionDAO() {
+	public static DAO<Filiere> getOptionDAO() {
 		return new OptionDAO(conn);
 
 	}
@@ -42,7 +50,7 @@ public class DAOFactory {
 	 * Retourne un objet Matiere
 	 * @return
 	 */
-	public static DAO getMatiereDAO(){
+	public static DAO<Matiere> getMatiereDAO(){
 		return new MatiereDAO(conn);
 	}
 	
@@ -50,7 +58,7 @@ public class DAOFactory {
 	 * Retourne un objet Noter
 	 * @return
 	 */
-	public static DAO getNoterDAO(){
+	public static DAO<Noter> getNoterDAO(){
 		return new NoterDAO(conn);
 	}
 	
@@ -58,7 +66,7 @@ public class DAOFactory {
 	 * Retourne un objet Noter
 	 * @return
 	 */
-	public static DAO getUserDAO(){
+	public static DAO<User> getUserDAO(){
 		return new UserDAO(conn);
 		
 	}
@@ -67,7 +75,7 @@ public class DAOFactory {
 	 * Retourne un objet UserRole
 	 * @return
 	 */
-	public static DAO getUserRole(){
+	public static DAO<UserRole> getUserRole(){
 		return new UserRoleDAO(conn);
 	}
 	
@@ -75,7 +83,7 @@ public class DAOFactory {
 	 * Retourne un objet Moyenne
 	 * @return
 	 */
-	public static DAO  getMoyenne(){
+	public static DAO<Moyenne>  getMoyenne(){
 		return new MoyenneDAO(conn);
 	}
 	
@@ -83,7 +91,7 @@ public class DAOFactory {
 	 * Retourne un objet TypeEval
 	 * @return
 	 */
-	public static DAO  getTypeEval(){
+	public static DAO<TypeEval>  getTypeEval(){
 		return new TypeEvalDAO(conn);
 	}
 }
