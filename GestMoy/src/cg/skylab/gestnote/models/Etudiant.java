@@ -13,7 +13,7 @@ public class Etudiant implements Serializable{
 	private String sexeEtudiant;
 	private String adresseEtudiant;
 	private List<Noter> noterList;
-	private Option codeOption;
+	private Filiere codeOption;
 	private List<Moyenne> moyenneList;
 	
 	public Etudiant() {
@@ -78,11 +78,11 @@ public class Etudiant implements Serializable{
 		this.noterList = noterList;
 	}
 
-	public Option getCodeOption() {
+	public Filiere getCodeOption() {
 		return codeOption;
 	}
 
-	public void setCodeOption(Option codeOption) {
+	public void setCodeOption(Filiere codeOption) {
 		this.codeOption = codeOption;
 	}
 

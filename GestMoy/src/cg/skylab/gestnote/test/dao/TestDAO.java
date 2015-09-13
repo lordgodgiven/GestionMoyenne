@@ -2,25 +2,29 @@ package cg.skylab.gestnote.test.dao;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.dao.DAOFactory;
-import cg.skylab.gestnote.models.Option;
+import cg.skylab.gestnote.models.Etudiant;
+import cg.skylab.gestnote.models.Filiere;
 
 public class TestDAO {
 
 	public static void main(String[] args) {
 		
-		DAO<Option> optionDao = DAOFactory.getOptionDAO();
+		DAO<Etudiant> etudiantDao = DAOFactory.getEtudiantDAO();
+		DAO<Filiere> optionDao = DAOFactory.getOptionDAO();
 		
-		Option option = new Option();
-		option.setCodeOption("EMI");
-		option.setLibelleOption("Electronique et Maintenance Informatique");
+		Filiere filiere=optionDao.find("EMI");
+				
 		
-		boolean ret = optionDao.create(option);
+		Etudiant etudiant = new Etudiant();
+		etudiant.setNomEtudiant("NIEME");
+		etudiant.setPrenomEtudiant("Dieudonné");
+		etudiant.setCodeOption(filiere);
 		
-		if(ret){
-			System.out.println("OK");
-		}else{
-			System.out.println("KO");
-		}
+		
+		etudiantDao.create(etudiant);
+		
+		
+		
 
 	}
 

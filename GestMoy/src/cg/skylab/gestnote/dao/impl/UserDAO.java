@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.models.User;
@@ -30,10 +31,17 @@ public class UserDAO extends DAO<User>{
 		return false;
 	}
 
-	
-	public User find(Integer id) {
+	@Override
+	public User find(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<User> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

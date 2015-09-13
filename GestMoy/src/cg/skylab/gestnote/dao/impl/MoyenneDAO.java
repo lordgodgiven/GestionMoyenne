@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.models.Moyenne;
@@ -30,10 +31,17 @@ public class MoyenneDAO extends DAO<Moyenne>{
 		return false;
 	}
 
-	
-	public Moyenne find(Integer id) {
+	@Override
+	public Moyenne find(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
+	public List<Moyenne> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

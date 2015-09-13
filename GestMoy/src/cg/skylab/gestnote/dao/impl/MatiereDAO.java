@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.models.Matiere;
@@ -30,10 +31,18 @@ public class MatiereDAO extends DAO<Matiere>{
 		return false;
 	}
 
-	
-	public Matiere find(String id) {
+	@Override
+	public Matiere find(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Matiere> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }

@@ -9,7 +9,7 @@ public class Matiere implements Serializable{
 	
 	private String codeMatiere;
 	private String libelleMatiere;
-	private List<Option> optionList;
+	private List<Filiere> optionList;
 	private List<Noter> noterList;
 	
 	public Matiere() {
@@ -39,11 +39,11 @@ public class Matiere implements Serializable{
 		this.libelleMatiere = libelleMatiere;
 	}
 
-	public List<Option> getOptionList() {
+	public List<Filiere> getOptionList() {
 		return optionList;
 	}
 
-	public void setOptionList(List<Option> optionList) {
+	public void setOptionList(List<Filiere> optionList) {
 		this.optionList = optionList;
 	}
 

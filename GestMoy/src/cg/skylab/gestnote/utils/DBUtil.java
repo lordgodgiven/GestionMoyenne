@@ -38,7 +38,7 @@ public class DBUtil {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			System.out.println("Connexion retournée");
+			
 			return connection;
 		}
 

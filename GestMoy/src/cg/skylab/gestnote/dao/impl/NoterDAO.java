@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.models.Noter;
@@ -30,8 +31,16 @@ public class NoterDAO extends DAO<Noter>{
 		return false;
 	}
 
-	
-	public Noter find(Integer idEtudiant, String codeMatier, String codeTypeEval) {
+
+
+	@Override
+	public Noter find(Object obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Noter> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

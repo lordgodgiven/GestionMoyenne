@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao;
 
 import java.sql.Connection;
+import java.util.List;
 
 public abstract class DAO<T> {
 
@@ -10,29 +11,14 @@ public abstract class DAO<T> {
 		this.connect = conn;
 	}
 
-
-	/**
-	 * Methode de création
-	 * @param obj
-	 * @return boolean
-	 */
 	public abstract boolean create(T obj);
 
-
-	/**
-	 * Methode de suppression
-	 * @param obj
-	 * @return boolean
-	 */
 	public abstract boolean delete(T obj);
 
-
-	/**
-	 * Methode de mise à jour
-	 * @param obj
-	 * @return boolean
-	 */
 	public abstract boolean update(T obj);
-
+	
+	public abstract T find(Object obj);
+	
+	public abstract List<T> getAll();
 
 }

@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 import cg.skylab.gestnote.models.TypeEval;
@@ -30,11 +31,18 @@ public class TypeEvalDAO extends DAO<TypeEval>{
 		return false;
 	}
 
-	
-	public TypeEval find(String id) {
+	@Override
+	public TypeEval find(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<TypeEval> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	
 	

@@ -1,6 +1,7 @@
 package cg.skylab.gestnote.dao.impl;
 
 import java.sql.Connection;
+import java.util.List;
 
 import cg.skylab.gestnote.dao.DAO;
 
@@ -29,10 +30,18 @@ public class TypeMoyenneDAO extends DAO<TypeMoyenneDAO>{
 		return false;
 	}
 
-	
-	public TypeMoyenneDAO find(String id) {
+	@Override
+	public TypeMoyenneDAO find(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<TypeMoyenneDAO> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 }
